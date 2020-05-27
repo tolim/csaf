@@ -19,7 +19,7 @@ validate() {
 
 }
 
-validate csaf_2.0/json_schema/CVE-2018-0171-modified.json
-validate csaf_2.0/json_schema/cvrf-rhba-2018-0489-modified.json
+validate csaf_2.0/examples/CVE-2018-0171-modified.json
+validate csaf_2.0/examples/cvrf-rhba-2018-0489-modified.json
 
 exit $FAIL
