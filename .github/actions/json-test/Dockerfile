@@ -10,16 +10,10 @@ ARG DEBIAN_FRONTEND="noninteractive"
 # install all necessary software components
 RUN apt-get update -q \
  && apt-get install -y --no-install-recommends -qq \
-    python3
+    python3 \
+    python3-jsonschema \
+    python3-simplejson
 
-RUN mkdir /docker
+COPY entrypoint.sh /
 
-#COPY docker/* /docker/
-#COPY csaf_json_schema.json /docker
-#COPY cvrf-rhba-2018-0489-modified.json /docker
-#COPY CVE-2018-0171-modified.json /docker
-
-COPY entrypoint.sh /docker/entrypoint.sh
-
-ENTRYPOINT ["/docker/entrypoint.sh"]
-
+ENTRYPOINT ["/entrypoint.sh"]
