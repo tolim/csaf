@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Test JSON schema
     steps:
-    - name: JSON schema test
-      id: json-test
+    - name: Checkout repository
       uses: actions/checkout@master
+    - name: Perform direct JSON schema test
+      id: json-test
       uses: ./.github/actions/json-test
       with:
         test-type: 'normal'
