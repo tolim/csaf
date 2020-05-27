@@ -3,11 +3,11 @@ on: [push]
 jobs:
   json-test_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Test JSON schema
     steps:
     - name: JSON schema test
       id: json-test
-      uses: tolim/csaf/actions/json-test@master
+      uses: ./actions/json-test
       with:
         test-type: 'normal'
     # Use the output from the `hello` step
