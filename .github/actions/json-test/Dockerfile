@@ -14,6 +14,6 @@ RUN apt-get update -q \
     python3-jsonschema \
     python3-simplejson
 
-COPY entrypoint.sh /
+COPY ../../../csaf_2.0/test/run_tests.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/run_tests.sh"]
