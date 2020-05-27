@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: JSON schema test
       id: json-test
-      uses: tolim/csaf/actions/json-test
+      uses: tolim/csaf/actions/json-test@master
       with:
         test-type: 'normal'
     # Use the output from the `hello` step
