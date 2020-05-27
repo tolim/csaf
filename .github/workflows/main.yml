@@ -12,6 +12,3 @@ jobs:
       uses: ./.github/actions/json-test
       with:
         test-type: 'normal'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The result was ${{ steps.json-test.outputs.result }}"
